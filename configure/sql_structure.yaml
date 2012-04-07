@@ -1,0 +1,6 @@
+inbound:
+	singular: inbound
+	plural: inbox
+	fields:
+		from: string
+		data: blob
