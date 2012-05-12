@@ -1,6 +1,8 @@
 <?php
 
 namespace Bundles\PostmarkApp;
+use InvalidArgumentException;
+use OverflowException;
 use Exception;
 use e;
 
