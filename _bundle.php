@@ -6,6 +6,11 @@ use Exception;
 use e;
 
 class Bundle extends SQLBundle {
+
+	public function _on_framework_loaded() {
+		e::$environment->requireVar('postmarkapp.api');
+		e::$environment->requireVar('postmarkapp.from');
+	}
 	
 	public function sendEmail($array) {
 		$email = new Mail_Postmark(e::$environment->requireVar('postmarkapp.api'), e::$environment->requireVar('postmarkapp.from'));
